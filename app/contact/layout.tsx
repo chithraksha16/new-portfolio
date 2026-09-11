@@ -13,7 +13,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`h-full antialiased`}
     >
-    <body className="min-h-full flex flex-col bg-neutral-100 dark:bg-neutral-700">
+    <body>
         {children}
         </body>
     </html>

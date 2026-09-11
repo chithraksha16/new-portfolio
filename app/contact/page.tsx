@@ -1,10 +1,11 @@
 import React from 'react'
+import Container from '@/components/Container'
 
 const page = () => {
   return (
-    <div>
+      <Container className='min-h-screen'>
       Contact
-    </div>
+      </Container>
   )
 }
 
