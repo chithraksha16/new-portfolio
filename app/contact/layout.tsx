@@ -36,15 +36,11 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
-  return (
-    <html
-      lang="en"
-      className={`h-full antialiased`}
-    >
-    <body>
-        {children}
-        </body>
-    </html>
-);
+export default function ContactLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return children;
 }
+

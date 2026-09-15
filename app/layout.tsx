@@ -84,7 +84,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${inter.className} ${ibmplexsans.variable} ${ibmplexsans.className} h-full antialiased`}
+      className={`${inter.variable}  ${ibmplexsans.variable}  h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-neutral-100 dark:bg-neutral-700">
         <Header/>

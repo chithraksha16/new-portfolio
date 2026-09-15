@@ -10,7 +10,6 @@ export default function Home() {
       <h1 className="dark:text-white text-black font-ibmplexsans font-semibold text-2xl">Chithraksha</h1>
       </div>
       </section>
-    
     </Container>
     </div>
     </>
