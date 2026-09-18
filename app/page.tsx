@@ -7,14 +7,16 @@ export default function Home() {
     <Container className="min-h-screen">
       <section id="about">
       <div className="px-10">
-      <Image src={''}
+      <Image src=''
       alt=""
       />
-      <div>
+      <div className="space-y-3">
       <h1 className="dark:text-white text-black font-ibmplexsans font-semibold text-2xl">Chithraksha</h1>
-      <span>Full stack developer</span>
+      <p className="font-heading">Full stack developer</p>
+      <p className="font-sans text-sm">I’m a Full-Stack Developer, Freelancer, and UI-focused Designer who builds modern, responsive websites and web applications. I combine thoughtful design with scalable development
+         to turn ideas into fast, functional, and engaging digital experiences.</p>
       </div>
-      <p>text Content here</p>
+      
       </div>
       </section>
     </Container>

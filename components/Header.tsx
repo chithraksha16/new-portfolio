@@ -29,7 +29,7 @@ return (
         height={70}
         className='rounded-full size-10'
         src="/chithraksha logo.webp"
-         alt=""/>
+         alt="chithraksha logo"/>
             <div className='flex gap-10 font-sans font-normal text-[15px]'>
                 <div className='flex gap-10'>
                 {navItems.map((items,idx)=>(
