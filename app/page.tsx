@@ -6,17 +6,39 @@ export default function Home() {
     <div className="min-h-screen flex items-start justify-start">
     <Container className="min-h-screen">
       <section id="about">
-      <div className="px-10">
-      <Image src=''
-      alt=""
-      />
-      <div className="space-y-3">
+      <div className="px-10 flex gap-10">
+     <div className="relative shrink-0">
+            <div className="rounded-full bg-gradient-to-br from-orange-400/50 via-slate-300/40 to-green-500/50 p-[2px] dark:from-orange-400/40 dark:via-white/20 dark:to-green-500/40">
+              <Image
+                src="/Chithraksha-photo.webp"
+                width={128}
+                height={128}
+                alt="Chithraksha's photo"
+                className="size-32 rounded-full object-cover ring-2 ring-white dark:ring-slate-900"
+              />
+            </div>
+ 
+            {/* India flag badge, bottom-right of the photo */}
+            <span
+              className="absolute bottom-0 right-0 flex size-9 items-center justify-center rounded-full border-2 border-white bg-white shadow-md dark:border-slate-900"
+              title="Based in India"
+              aria-label="Based in India"
+            >
+              <svg viewBox="0 0 36 24" className="size-6 overflow-hidden rounded-[2px]">
+                <rect width="36" height="8" y="0" fill="#FF9933" />
+                <rect width="36" height="8" y="8" fill="#FFFFFF" />
+                <rect width="36" height="8" y="16" fill="#138808" />
+                <circle cx="18" cy="12" r="2.6" fill="none" stroke="#000080" strokeWidth="0.4" />
+                <circle cx="18" cy="12" r="0.4" fill="#000080" />
+              </svg>
+            </span>
+          </div>
+      <div className="space-y-2">
       <h1 className="dark:text-white text-black font-ibmplexsans font-semibold text-2xl">Chithraksha</h1>
       <p className="font-heading">Full stack developer</p>
       <p className="font-sans text-sm">I’m a Full-Stack Developer, Freelancer, and UI-focused Designer who builds modern, responsive websites and web applications. I combine thoughtful design with scalable development
          to turn ideas into fast, functional, and engaging digital experiences.</p>
       </div>
-      
       </div>
       </section>
     </Container>
