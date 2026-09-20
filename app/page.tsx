@@ -1,12 +1,13 @@
 import Container from "@/components/Container";
 import Image from "next/image";
+import RoleFlip from "@/components/RoleFlip";
 export default function Home() {
   return (
     <>
     <div className="min-h-screen flex items-start justify-start">
     <Container className="min-h-screen">
       <section id="about">
-      <div className="px-10 flex gap-10">
+      <div className="px-10 flex gap-8">
      <div className="relative shrink-0">
             <div className="rounded-full bg-gradient-to-br from-orange-400/50 via-slate-300/40 to-green-500/50 p-[2px] dark:from-orange-400/40 dark:via-white/20 dark:to-green-500/40">
               <Image
@@ -33,13 +34,28 @@ export default function Home() {
               </svg>
             </span>
           </div>
-      <div className="space-y-2">
-      <h1 className="dark:text-white text-black font-ibmplexsans font-semibold text-2xl">Chithraksha</h1>
-      <p className="font-heading">Full stack developer</p>
-      <p className="font-sans text-sm">I’m a Full-Stack Developer, Freelancer, and UI-focused Designer who builds modern, responsive websites and web applications. I combine thoughtful design with scalable development
+      <div className="space-y-2 flex flex-col justify-end">
+      <h1 className="dark:text-white text-black font-ibmplexsans font-semibold text-3xl">Chithraksha</h1>
+      <h2 className=" text-sm font-sans font-medium text-gray-700 dark:text-gray-300">
+        I'm a{" "}
+        <RoleFlip
+          roles={[
+            "Full Stack Developer",
+            "Freelancer",
+            "Frontend Developer",
+            "Backend Developer",
+            "UI Designer",
+          ]}
+          interval={2200}
+        />
+      </h2>
+      </div>
+      </div>
+
+      {/* <div>
+        <p className="font-sans text-sm">I’m a Full-Stack Developer, Freelancer, and UI-focused Designer who builds modern, responsive websites and web applications. I combine thoughtful design with scalable development
          to turn ideas into fast, functional, and engaging digital experiences.</p>
-      </div>
-      </div>
+      </div> */}
       </section>
     </Container>
     </div>
