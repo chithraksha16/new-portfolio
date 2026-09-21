@@ -52,6 +52,22 @@ export default function Home() {
       </div>
       </div>
 
+      <div >
+        <div>
+          <span><h3>Bangalore,India</h3></span>
+           <span><h3>He/him</h3></span>
+        </div>
+        <div>
+          <span><h3>+91 8105280460</h3></span>
+          <span><h3>chithrakshakharvi@gmail.com</h3></span>
+        </div>
+        <div>
+          <span><h3>Resume</h3></span>
+          <span><h3>www.chithraksha.in</h3></span>
+        </div>
+
+      </div>
+
       {/* <div>
         <p className="font-sans text-sm">I’m a Full-Stack Developer, Freelancer, and UI-focused Designer who builds modern, responsive websites and web applications. I combine thoughtful design with scalable development
          to turn ideas into fast, functional, and engaging digital experiences.</p>
