@@ -51,21 +51,22 @@ export default function Home() {
       </h2>
       </div>
       </div>
-
-      <div >
-        <div>
+      <div className="w-full  flex justify-center items-center font-sans text-base mt-5">
+      <div  className="w-full max-w-xl ">
+        <div className="flex gap-8 justify-between">
           <span><h3>Bangalore,India</h3></span>
            <span><h3>He/him</h3></span>
         </div>
-        <div>
+        <div className="flex gap-8  justify-between">
           <span><h3>+91 8105280460</h3></span>
           <span><h3>chithrakshakharvi@gmail.com</h3></span>
         </div>
-        <div>
+        <div className="flex gap-8  justify-between">
           <span><h3>Resume</h3></span>
           <span><h3>www.chithraksha.in</h3></span>
         </div>
 
+      </div>
       </div>
 
       {/* <div>
