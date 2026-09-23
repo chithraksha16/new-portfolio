@@ -23,7 +23,7 @@ const Header = () => {
 return (
     
     <Container>
-        <div className=' w-full h-18 px-5 flex justify-between'>
+        <div className=' w-full h-18 p-5 flex justify-between'>
         <Image
         width={70} 
         height={70}
