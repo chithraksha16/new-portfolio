@@ -8,10 +8,10 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div className="min-h-screen flex items-start justify-center">
-      <Container className="min-h-screen max-w-4xl mx-auto px-6 md:px-8">
+      <Container className="min-h-screen max-w-4xl mx-auto "> {/* px-6 md:px-8 */}
         <section className="py-16 md:py-24" id="about">
           {/* Identity block */}
-          <div className="flex items-center gap-6 md:gap-8">
+          <div className="flex items-center gap-6 md:gap-8 px-6 md:px-8">
             <div className="relative shrink-0">
               <div className="rounded-full bg-gradient-to-br from-orange-400/50 via-slate-300/40 to-green-500/50 p-[2px] dark:from-orange-400/40 dark:via-white/20 dark:to-green-500/40">
                 <Image
@@ -38,7 +38,7 @@ export default function Home() {
             </div>
 
             <div className="space-y-1.5">
-              <h1 className="font-ibmplexsans font-semibold text-3xl md:text-4xl text-black dark:text-white tracking-tight">
+              <h1 className="font-heading font-semibold text-3xl md:text-4xl text-black dark:text-white tracking-tight">
                 Chithraksha
               </h1>
               <h2 className="font-sans text-base text-gray-600 dark:text-gray-400">
@@ -57,10 +57,16 @@ export default function Home() {
           </div>
 
           {/* Divider */}
-          <div className="mt-10 md:mt-12 h-px w-full bg-gray-200 dark:bg-white/10" />
+        <div
+  className="mt-10 md:mt-12 h-10 w-full border-y border-gray-200 text-gray-300 dark:border-white/10 dark:text-white/10"
+  style={{
+    backgroundImage:
+      "repeating-linear-gradient(45deg, currentColor 0, currentColor 1px, transparent 1px, transparent 8px)",
+  }}
+/>
 
           {/* Contact details */}
-          <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-4 font-sans text-sm">
+          <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-4 font-sans text-sm px-6 md:px-8">
             <Link
               href="#"
               className="group flex items-center gap-3 text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors w-fit"
