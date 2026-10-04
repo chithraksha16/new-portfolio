@@ -58,21 +58,7 @@ function Rich({ text }: { text: string }) {
   );
 }
  
-/* Diagonal hatch band — uses currentColor so it adapts to light/dark. */
-function Hatch({ edge }: { edge: "top" | "bottom" }) {
-  return (
-    <div
-      aria-hidden
-      className={`h-4 w-full text-foreground/10 ${
-        edge === "top" ? "border-b" : "border-t"
-      } border-border`}
-      style={{
-        backgroundImage:
-          "repeating-linear-gradient(135deg, currentColor 0, currentColor 1px, transparent 1px, transparent 6px)",
-      }}
-    />
-  );
-}
+
  
 function Dot({ small = false }: { small?: boolean }) {
   return (
@@ -110,11 +96,11 @@ export default function About() {
       <div className="flex items-center justify-between border-b border-border px-4  sm:px-6 md:px-8">
         <h2
           id="about-title"
-          className="font-mono text-3xl font-bold tracking-tight text-foreground sm:text-4xl md:text-5xl"
+          className="font-heading text-3xl font-bold tracking-tight text-foreground sm:text-4xl md:text-5xl"
         >
           About
         </h2>
-        <span className="hidden font-mono text-xs text-muted-foreground sm:block">
+        <span className="hidden font-sans text-xs text-muted-foreground sm:block">
           ~/about
         </span>
       </div>
@@ -126,7 +112,7 @@ export default function About() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, margin: "-80px" }}
-          className="space-y-5 font-mono text-sm leading-7 text-muted-foreground sm:text-[15px] md:text-base md:leading-8"
+          className="space-y-5 font-sans text-sm leading-7 text-muted-foreground sm:text-[15px] md:text-base md:leading-8"
         >
           {items.map((item, i) => (
             <motion.li key={i} variants={row} className="flex gap-4">
@@ -136,7 +122,7 @@ export default function About() {
                   <Rich text={item.text} />
                 </p>
                 {item.children && (
-                  <ul className="mt-3 space-y-2 border-l border-border pl-5 text-[13px] sm:text-sm">
+                  <ul className="mt-3 space-y-1 border-l border-border pl-5 text-[13px] sm:text-sm">
                     {item.children.map((c, j) => (
                       <li key={j} className="flex gap-3">
                         <Dot small />
@@ -153,7 +139,7 @@ export default function About() {
         </motion.ul>
  
         {/* Footer meta */}
-        <div className="mt-10 flex flex-col gap-3 border-t border-border pt-5 font-mono text-xs text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-10 flex flex-col gap-3 border-t border-border pt-5 font-sans text-xs text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
           <span>1 year experience · Full Stack · UI/UX · Freelance</span>
           <a
             href="#projects"
@@ -168,7 +154,6 @@ export default function About() {
         </div>
       </div>
  
-      <Hatch edge="bottom" />
-    </section>
+          </section>
   );
 }
