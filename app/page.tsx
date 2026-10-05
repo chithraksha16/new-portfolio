@@ -17,6 +17,7 @@ import {
 import Link from "next/link";
 import SocialLinks from "@/components/SocialLinks";
 import About from "@/components/About";
+import GitHubContribution from "@/components/GithubContribution";
 
 export default function Home() {
   const playPronunciation = () => {
@@ -441,6 +442,23 @@ export default function Home() {
           />
         </section>
         <About/>
+        <div
+            className="
+              h-8
+              w-full
+              border-y
+              border-gray-200
+              text-gray-300
+              dark:border-white/10
+              dark:text-white/10
+            "
+            style={{
+              backgroundImage:
+                "repeating-linear-gradient(45deg, currentColor 0, currentColor 1px, transparent 1px, transparent 8px)",
+            }}
+          />
+          <GitHubContribution/>
+
       </Container>
     </div>
   );
