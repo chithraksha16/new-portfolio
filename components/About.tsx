@@ -30,14 +30,6 @@ const items: Item[] = [
     text: "**Vision:** To become a well-rounded developer who brings together engineering, design and problem-solving to build products that are reliable, meaningful and enjoyable to use.",
   },
   {
-    text: "**What I believe in**",
-    children: [
-      "Write code that is **simple to understand** and easy to maintain.",
-      "Design interfaces with **users and usability** in mind.",
-      "Keep learning, experimenting and **building real projects**.",
-    ],
-  },
-  {
     text: "**Current direction:** Building full-stack projects, working with clients, improving my engineering practices and exploring new technologies that can help me build better products.",
   },
 ];
@@ -89,9 +81,8 @@ export default function About() {
   };
  
   return (
-    <section id="about" aria-labelledby="about-title" className="w-full">
+    <section id="about" aria-labelledby="about-title" className="w-full mt-4">
      
- 
       {/* Header */}
       <div className="flex items-center justify-between border-b border-border px-4  sm:px-6 md:px-8">
         <h2
@@ -106,7 +97,7 @@ export default function About() {
       </div>
  
       {/* Content */}
-      <div className="px-4 py-8 sm:px-6 sm:py-10 md:px-8">
+      <div className="px-4 py-3 sm:px-6 ">
         <motion.ul
           variants={list}
           initial="hidden"

@@ -30,7 +30,7 @@ export default function Home() {
       <Container className="w-full min-h-screen max-w-4xl mx-auto">
         <section
           id="about"
-          className="w-full py-12 sm:py-16 md:py-24"
+          className="w-full pt-12 sm:pt-16 md:pt-24"
         >
           {/* ================= IDENTITY ================= */}
           <div
@@ -458,6 +458,21 @@ export default function Home() {
             }}
           />
           <GitHubContribution/>
+          <div
+            className="
+              h-8
+              w-full
+              border-y
+              border-gray-200
+              text-gray-300
+              dark:border-white/10
+              dark:text-white/10
+            "
+            style={{
+              backgroundImage:
+                "repeating-linear-gradient(45deg, currentColor 0, currentColor 1px, transparent 1px, transparent 8px)",
+            }}
+          />
 
       </Container>
     </div>
