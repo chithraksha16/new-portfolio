@@ -18,6 +18,7 @@ import Link from "next/link";
 import SocialLinks from "@/components/SocialLinks";
 import About from "@/components/About";
 import GitHubContribution from "@/components/GithubContribution";
+import TechStack from "@/components/TechStack";
 
 export default function Home() {
   const playPronunciation = () => {
@@ -441,6 +442,9 @@ export default function Home() {
             }}
           />
         </section>
+
+
+        <section className="about">
         <About/>
         <div
             className="
@@ -473,6 +477,10 @@ export default function Home() {
                 "repeating-linear-gradient(45deg, currentColor 0, currentColor 1px, transparent 1px, transparent 8px)",
             }}
           />
+          </section>
+          <section className="skills">
+          <TechStack/>
+          </section>
 
       </Container>
     </div>
