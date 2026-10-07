@@ -1,255 +1,303 @@
 "use client";
 
-import {
-  SiHtml5,
-  SiCss,
-  SiJavascript,
-  SiTypescript,
-  SiPython,
-  SiReact,
-  SiNextdotjs,
-  SiNodedotjs,
-  SiExpress,
-  SiMongodb,
-  SiRedux,
-  SiFramer,
-  SiTailwindcss,
-  SiBootstrap,
-  SiPrisma,
-  SiSocketdotio,
-  SiNumpy,
-  SiPandas,
-  SiC,
-  SiSqlite,
-  SiDocker,
-  SiVercel,
-  SiNetlify,
-  SiCloudinary,
-  SiGit,
-  SiGithub,
-  SiVsco,
-  SiFigma,
-  SiShadcnui,
-} from "react-icons/si";
+import { motion } from "framer-motion";
 
-const skills = [
+type Skill =
+  | {
+      name: string;
+      icon: string;
+      image?: never;
+    }
+  | {
+      name: string;
+      image: string;
+      icon?: never;
+    };
+
+const skills: Skill[] = [
+  // ─────────────────────────────────────
+  // Skill Icons
+  // ─────────────────────────────────────
   {
     name: "HTML",
-    icon: SiHtml5,
-    color: "#E34F26",
+    icon: "html",
   },
   {
     name: "CSS",
-    icon: SiCss,
-    color: "#1572B6",
+    icon: "css",
   },
   {
     name: "JavaScript",
-    icon: SiJavascript,
-    color: "#F7DF1E",
+    icon: "js",
   },
   {
     name: "TypeScript",
-    icon: SiTypescript,
-    color: "#3178C6",
+    icon: "ts",
   },
   {
     name: "Python",
-    icon: SiPython,
-    color: "#3776AB",
+    icon: "python",
   },
   {
     name: "React",
-    icon: SiReact,
-    color: "#61DAFB",
+    icon: "react",
   },
   {
     name: "Next.js",
-    icon: SiNextdotjs,
-    color: "#FFFFFF",
+    icon: "nextjs",
   },
   {
     name: "Node.js",
-    icon: SiNodedotjs,
-    color: "#339933",
+    icon: "nodejs",
   },
   {
     name: "Express.js",
-    icon: SiExpress,
-    color: "#FFFFFF",
+    icon: "express",
   },
   {
     name: "MongoDB",
-    icon: SiMongodb,
-    color: "#47A248",
+    icon: "mongodb",
   },
   {
     name: "Redux",
-    icon: SiRedux,
-    color: "#764ABC",
-  },
-  {
-    name: "Framer Motion",
-    icon: SiFramer,
-    color: "#0055FF",
+    icon: "redux",
   },
   {
     name: "Tailwind CSS",
-    icon: SiTailwindcss,
-    color: "#06B6D4",
+    icon: "tailwind",
   },
   {
     name: "Bootstrap",
-    icon: SiBootstrap,
-    color: "#7952B3",
+    icon: "bootstrap",
   },
   {
     name: "Prisma",
-    icon: SiPrisma,
-    color: "#FFFFFF",
-  },
-  {
-    name: "Socket.IO",
-    icon: SiSocketdotio,
-    color: "#FFFFFF",
-  },
-  {
-    name: "NumPy",
-    icon: SiNumpy,
-    color: "#4D77CF",
-  },
-  {
-    name: "Pandas",
-    icon: SiPandas,
-    color: "#150458",
+    icon: "prisma",
   },
   {
     name: "C",
-    icon: SiC,
-    color: "#A8B9CC",
+    icon: "c",
   },
   {
     name: "SQLite",
-    icon: SiSqlite,
-    color: "#003B57",
+    icon: "sqlite",
   },
   {
     name: "Docker",
-    icon: SiDocker,
-    color: "#2496ED",
+    icon: "docker",
   },
   {
     name: "Vercel",
-    icon: SiVercel,
-    color: "#FFFFFF",
+    icon: "vercel",
   },
   {
     name: "Netlify",
-    icon: SiNetlify,
-    color: "#00C7B7",
-  },
-  {
-    name: "Cloudinary",
-    icon: SiCloudinary,
-    color: "#3448C5",
+    icon: "netlify",
   },
   {
     name: "Git",
-    icon: SiGit,
-    color: "#F05032",
+    icon: "git",
   },
   {
     name: "GitHub",
-    icon: SiGithub,
-    color: "#FFFFFF",
+    icon: "github",
   },
   {
     name: "VS Code",
-    icon: SiVsco,
-    color: "#007ACC",
+    icon: "vscode",
   },
   {
     name: "Figma",
-    icon: SiFigma,
-    color: "#F24E1E",
+    icon: "figma",
+  },
+
+  // ─────────────────────────────────────
+  // Devicon alternatives
+  // ─────────────────────────────────────
+  {
+    name: "Framer Motion",
+    image:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/framermotion/framermotion-original.svg",
+  },
+  {
+    name: "NumPy",
+    image:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/numpy/numpy-original.svg",
+  },
+  {
+    name: "Pandas",
+    image:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original.svg",
+  },
+  {
+    name: "Socket.IO",
+    image:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/socketio/socketio-original.svg",
+  },
+
+  // ─────────────────────────────────────
+  // Local custom icons
+  // ─────────────────────────────────────
+  {
+    name: "Zustand",
+    image: "/icons/zustand.svg",
   },
   {
     name: "shadcn/ui",
-    icon: SiShadcnui,
-    color: "#FFFFFF",
+    image: "/icons/shadcn.svg",
   },
 ];
 
+
+// ─────────────────────────────────────
+// Container animation
+// ─────────────────────────────────────
+
+const containerVariants = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.055,
+      delayChildren: 0.1,
+    },
+  },
+};
+
+
+// ─────────────────────────────────────
+// Individual skill animation
+// ─────────────────────────────────────
+
+const itemVariants = {
+  hidden: {
+    opacity: 0,
+    y: 12,
+    scale: 0.9,
+  },
+
+  show: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: {
+      type: "spring" as const,
+      stiffness: 180,
+      damping: 16,
+    },
+  },
+};
+
+
 export default function TechStack() {
   return (
-    <section id="stack" className="w-full py-16">
+    <section id="stack" className="w-full py-4">
       <div className="mx-auto max-w-5xl px-6">
+
         {/* Heading */}
         <h2 className="mb-8 text-4xl font-bold tracking-tight">
-          Stack
+          Tech Stack
         </h2>
 
-        {/* Icons */}
-        <div className="flex flex-wrap items-center gap-x-6 gap-y-6">
-          {skills.map(({ name, icon: Icon, color }) => (
-            <div
-              key={name}
-              className="group relative flex items-center justify-center"
-            >
-              {/* Icon */}
-              <Icon
-                size={36}
-                style={{ color }}
-                className="
-                  transition-all
-                  duration-200
-                  group-hover:scale-110
-                "
-              />
+        {/* Skills */}
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="show"
+          viewport={{
+            once: true,
+            amount: 0.15,
+          }}
+          className="flex flex-wrap items-center justify-center gap-x-6 gap-y-7 sm:justify-start"
+        >
+          {skills.map((skill) => {
+            const imageUrl =
+              "image" in skill
+                ? skill.image
+                : `https://skillicons.dev/icons?i=${skill.icon}`;
 
-              {/* Tooltip */}
-              <div
+            return (
+              <motion.div
+                key={skill.name}
+                variants={itemVariants}
                 className="
-                  pointer-events-none
-                  absolute
-                  -top-9
-                  left-1/2
-                  z-50
-                  -translate-x-1/2
-                  whitespace-nowrap
-                  rounded-md
-                  bg-black
-                  px-2
-                  py-1
-                  text-[11px]
-                  font-medium
-                  text-white
-                  opacity-0
-                  shadow-lg
-                  transition-all
-                  duration-200
-                  group-hover:-translate-y-1
-                  group-hover:opacity-100
+                  group
+                  relative
+                  flex
+                  items-center
+                  justify-center
                 "
               >
-                {name}
-
-                {/* Arrow */}
-                <span
+                {/* Icon */}
+                <motion.img
+                  src={imageUrl}
+                  alt={skill.name}
+                  width={40}
+                  height={40}
+                  loading="lazy"
+                  whileHover={{
+                    scale: 1.12,
+                    y: -4,
+                  }}
+                  whileTap={{
+                    scale: 0.94,
+                  }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 350,
+                    damping: 18,
+                  }}
                   className="
-                    absolute
-                    -bottom-1
-                    left-1/2
-                    size-2
-                    -translate-x-1/2
-                    rotate-45
-                    bg-black
+                    size-10
+                    object-contain
+                    transition-transform
+                    duration-200
                   "
                 />
-              </div>
-            </div>
-          ))}
-        </div>
+
+                {/* Tooltip */}
+                <div
+                  className="
+                    pointer-events-none
+                    absolute
+                    -top-10
+                    left-1/2
+                    z-50
+                    -translate-x-1/2
+                    whitespace-nowrap
+                    rounded-md
+                    bg-black
+                    px-2.5
+                    py-1.5
+                    text-[11px]
+                    font-medium
+                    text-white
+                    opacity-0
+                    shadow-lg
+                    transition-all
+                    duration-200
+                    group-hover:-translate-y-1
+                    group-hover:opacity-100
+                  "
+                >
+                  {skill.name}
+
+                  {/* Tooltip Arrow */}
+                  <span
+                    className="
+                      absolute
+                      -bottom-1
+                      left-1/2
+                      size-2
+                      -translate-x-1/2
+                      rotate-45
+                      bg-black
+                    "
+                  />
+                </div>
+              </motion.div>
+            );
+          })}
+        </motion.div>
       </div>
     </section>
   );
