@@ -480,6 +480,21 @@ export default function Home() {
           </section>
           <section className="skills">
           <TechStack/>
+          <div
+            className="
+              h-8
+              w-full
+              border-y
+              border-gray-200
+              text-gray-300
+              dark:border-white/10
+              dark:text-white/10
+            "
+            style={{
+              backgroundImage:
+                "repeating-linear-gradient(45deg, currentColor 0, currentColor 1px, transparent 1px, transparent 8px)",
+            }}
+          />
           </section>
 
       </Container>
