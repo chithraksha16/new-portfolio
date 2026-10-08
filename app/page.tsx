@@ -19,6 +19,7 @@ import SocialLinks from "@/components/SocialLinks";
 import About from "@/components/About";
 import GitHubContribution from "@/components/GithubContribution";
 import TechStack from "@/components/TechStack";
+import Experience from "@/components/Experience";
 
 export default function Home() {
   const playPronunciation = () => {
@@ -495,6 +496,9 @@ export default function Home() {
                 "repeating-linear-gradient(45deg, currentColor 0, currentColor 1px, transparent 1px, transparent 8px)",
             }}
           />
+          </section>
+          <section id="experience">
+            <Experience/>
           </section>
 
       </Container>

@@ -107,8 +107,21 @@ const skills: Skill[] = [
     icon: "vscode",
   },
   {
+    name: "Anaconda",
+    icon: "anaconda",
+  },
+  {
     name: "Figma",
     icon: "figma",
+  },
+  {
+    name: "Postman",
+    icon: "postman",
+  },
+  
+  {
+    name: "Npm",
+    icon: "npm",
   },
 
   // ─────────────────────────────────────
@@ -119,6 +132,11 @@ const skills: Skill[] = [
     image:
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/framermotion/framermotion-original.svg",
   },
+  {
+  name: "Render",
+  image:
+    "https://cdn.simpleicons.org/render/46E3B7",
+},
   {
     name: "NumPy",
     image:
@@ -140,11 +158,7 @@ const skills: Skill[] = [
   // ─────────────────────────────────────
   {
     name: "Zustand",
-    image: "/icons/zustand.svg",
-  },
-  {
-    name: "shadcn/ui",
-    image: "/icons/shadcn.svg",
+    image: "/Zustand-icon.webp",
   },
 ];
 
