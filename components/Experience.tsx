@@ -37,29 +37,7 @@ const experiences = [
     ],
   },
 
-  {
-    company: "Codelab System",
-    role: "AI & ML Intern",
-    type: "Internship",
-    period: "10.2025–11.2025",
-    icon: BriefcaseBusiness,
-    current: false,
-
-    points: [
-      "Gained practical experience in machine learning using Python and industry-standard libraries.",
-      "Used NumPy and Pandas for data cleaning, analysis and data manipulation.",
-      "Worked with machine learning workflows and basic predictive models.",
-      "Visualized datasets, trends and results using Matplotlib.",
-    ],
-
-    technologies: [
-      "Python",
-      "NumPy",
-      "Pandas",
-      "Scikit-learn",
-      "Matplotlib",
-    ],
-  },
+  
 
   {
     company: "Zephyr Technologies & Solutions",
@@ -83,6 +61,29 @@ const experiences = [
       "MongoDB",
       "Tailwind CSS",
       "Bootstrap",
+    ],
+  },
+  {
+    company: "Codelab System",
+    role: "AI & ML Intern",
+    type: "Internship",
+    period: "10.2025–11.2025",
+    icon: BriefcaseBusiness,
+    current: false,
+
+    points: [
+      "Gained practical experience in machine learning using Python and industry-standard libraries.",
+      "Used NumPy and Pandas for data cleaning, analysis and data manipulation.",
+      "Worked with machine learning workflows and basic predictive models.",
+      "Visualized datasets, trends and results using Matplotlib.",
+    ],
+
+    technologies: [
+      "Python",
+      "NumPy",
+      "Pandas",
+      "Scikit-learn",
+      "Matplotlib",
     ],
   },
 ];
