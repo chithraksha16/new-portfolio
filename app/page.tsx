@@ -20,6 +20,7 @@ import About from "@/components/About";
 import GitHubContribution from "@/components/GithubContribution";
 import TechStack from "@/components/TechStack";
 import Experience from "@/components/Experience";
+import Education from "@/components/Education";
 
 export default function Home() {
   const playPronunciation = () => {
@@ -500,6 +501,39 @@ export default function Home() {
           <section id="experience">
             <Experience/>
           </section>
+          <div
+            className="
+              h-8
+              w-full
+              border-y
+              border-gray-200
+              text-gray-300
+              dark:border-white/10
+              dark:text-white/10
+            "
+            style={{
+              backgroundImage:
+                "repeating-linear-gradient(45deg, currentColor 0, currentColor 1px, transparent 1px, transparent 8px)",
+            }}
+          />
+          <section>
+            <Education/>
+          </section>
+          <div
+            className="
+              h-8
+              w-full
+              border-y
+              border-gray-200
+              text-gray-300
+              dark:border-white/10
+              dark:text-white/10
+            "
+            style={{
+              backgroundImage:
+                "repeating-linear-gradient(45deg, currentColor 0, currentColor 1px, transparent 1px, transparent 8px)",
+            }}
+          />
 
       </Container>
     </div>
