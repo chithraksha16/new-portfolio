@@ -21,6 +21,7 @@ import GitHubContribution from "@/components/GithubContribution";
 import TechStack from "@/components/TechStack";
 import Experience from "@/components/Experience";
 import Education from "@/components/Education";
+import Projects from "@/components/Projects";
 
 export default function Home() {
   const playPronunciation = () => {
@@ -534,6 +535,9 @@ export default function Home() {
                 "repeating-linear-gradient(45deg, currentColor 0, currentColor 1px, transparent 1px, transparent 8px)",
             }}
           />
+          <section>
+            <Projects/>
+          </section>
 
       </Container>
     </div>
