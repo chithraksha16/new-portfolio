@@ -4,7 +4,7 @@ import Container from '@/components/Container'
 const page = () => {
   return (
       <Container className='min-h-screen'>
-      Contact
+      cintact
       </Container>
   )
 }
