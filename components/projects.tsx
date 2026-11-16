@@ -15,8 +15,8 @@ const projects = [
     description:
       "IngreWish generates personalized recipes based on your ingredients and taste cravings, including detailed nutrition like calories and protein.",
     image: "/ingrewish.webp",
-    demoUrl: "https://ingre-wish.vercel.app/",
-    githubUrl: "https://github.com/chithraksha16/IngreWish",
+    demoUrl: "",
+    githubUrl: "",
     tags: [
       "TypeScript",
       "React.js",
@@ -38,8 +38,8 @@ const projects = [
     description:
       "Pingme is a real-time chat app where users can text, share photos, upload profiles, and choose from 10+ themes.",
     image: "/pingme1.webp",
-    demoUrl: "https://pingme-theta.vercel.app/",
-    githubUrl: "https://github.com/chithraksha16/Pingme",
+    demoUrl: "",
+    githubUrl: "",
     tags: [
       "React.js",
       "Node.js",
@@ -60,8 +60,8 @@ const projects = [
     description:
       "Ask questions, post ideas, or share facts—Interest-tok brings people together to comment, discuss, and like what matters to them.",
     image: "/intrest-tok.webp",
-    demoUrl: "https://intrest-tok.vercel.app/",
-    githubUrl: "https://github.com/chithraksha16/Intrest-tok",
+    demoUrl: "",
+    githubUrl: "",
     tags: [
       "React.js",
       "Node.js",
