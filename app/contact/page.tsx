@@ -4,12 +4,13 @@ import Form from '@/components/Form'
 const page = () => {
   return (
       <Container className='min-h-screen'>
-      <div className='mt-10'>
+      <div className='my-10 flex flex-col'>
         <div className='space-y-2'>
           <h1 className='text-2xl font-heading italic text-center'>Contact Chithraksha</h1>
           <p className='text-sm text-center font-sans'>Have a project in mind or just want to connect? Let’s start a conversation and turn your ideas into something meaningful.</p>
         </div>
-
+        
+        <div className='flex justify-around'>
         <div className=''>
           <div>
             email
@@ -23,6 +24,7 @@ const page = () => {
         </div>
 
        <Form/>
+        </div>
       </div>
       </Container>
   )
