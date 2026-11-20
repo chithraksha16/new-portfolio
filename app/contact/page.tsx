@@ -11,20 +11,24 @@ import {
   Phone,
   MessageCircle,
 } from "lucide-react";
+import {
+  FaLinkedin,
+  FaGithub,
+} from "react-icons/fa";
 
 const contactDetails = [
   {
     icon: Mail,
     label: "Email",
-    value: "your-email@example.com",
-    href: "mailto:your-email@example.com",
+    value: "chithrakshakharvi@gmail.com",
+    href: "mailto:chithrakshakharvi@gmail.com",
     description: "Send me an email anytime",
   },
   {
     icon: Phone,
     label: "Phone / WhatsApp",
-    value: "+91 XXXXX XXXXX",
-    href: "https://wa.me/91XXXXXXXXXX",
+    value: "+91 81052 80460",
+    href: "https://wa.me/918105280460",
     description: "Available for calls and messages",
   },
   {
@@ -46,13 +50,13 @@ const contactDetails = [
 const socials = [
   {
     name: "GitHub",
-    href: "https://github.com/yourusername",
-    icon: MapPin,
+    href: "https://github.com/chithraksha16",
+    icon: FaGithub,
   },
   {
     name: "LinkedIn",
-    href: "https://linkedin.com/in/yourusername",
-    icon: MapPin,
+    href: "https://linkedin.com/in/chithraksha.",
+    icon: FaLinkedin,
   },
 ];
 
@@ -80,10 +84,10 @@ export default function ContactPage() {
           </div>
 
           {/* Single Column Layout */}
-          <div className="flex flex-col gap-12 sm:gap-16 px-10">
+          <div className="flex flex-col gap-12 sm:gap-16 ">
 
             {/* Contact Information */}
-            <section>
+            <section className="px-10">
               <div className="mb-7">
                 <h2 className="text-xl font-semibold sm:text-2xl">
                   Get in touch
@@ -186,9 +190,24 @@ export default function ContactPage() {
                 </div>
               </div>
             </section>
-
+<div
+            className="
+              h-8
+              w-full
+              border-y
+              border-gray-200
+              text-gray-300
+              dark:border-white/10
+              dark:text-white/10
+            "
+            style={{
+              backgroundImage:
+                "repeating-linear-gradient(45deg, currentColor 0, currentColor 1px, transparent 1px, transparent 8px)",
+            }}
+          />
             {/* Contact Form */}
-            <section className="w-full">
+            
+            <section className="w-full px-10">
               <div className="mb-7">
                 <h2 className="text-xl font-semibold sm:text-2xl">
                   Send me a message
@@ -198,7 +217,7 @@ export default function ContactPage() {
                   back to you as soon as possible.
                 </p>
               </div>
-
+              
               <div className="w-full rounded-2xl border bg-card p-5 sm:p-8">
                 <Form />
               </div>
