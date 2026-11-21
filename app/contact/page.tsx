@@ -69,7 +69,7 @@ export default function ContactPage() {
           {/* Heading */}
           <div className="mb-12 text-center sm:mb-16">
             <span className="mb-4 inline-flex items-center gap-2 rounded-full border px-4 py-2 text-xs font-medium text-muted-foreground">
-              <span className="h-2 w-2 rounded-full bg-green-500" />
+              <span className="h-2 w-2 rounded-full bg-green-500 animate-ping scale-50" />
               Available for opportunities
             </span>
 
