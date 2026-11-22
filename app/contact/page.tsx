@@ -221,6 +221,21 @@ export default function ContactPage() {
               <div className="w-full rounded-2xl border bg-card p-5 sm:p-8">
                 <Form />
               </div>
+              <div
+            className="
+              h-8
+              w-full
+              border-y
+              border-gray-200
+              text-gray-300
+              dark:border-white/10
+              dark:text-white/10
+            "
+            style={{
+              backgroundImage:
+                "repeating-linear-gradient(45deg, currentColor 0, currentColor 1px, transparent 1px, transparent 8px)",
+            }}
+          />
             </section>
 
           </div>
