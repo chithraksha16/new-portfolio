@@ -2,6 +2,7 @@ import React from 'react'
 import Container from './Container'
 import Link from 'next/link'
 import Image from 'next/image'
+import CommandMenu from './CommandMenu'
 
 
 
@@ -39,7 +40,7 @@ return (
                 </div>
 
                 <div>
-                    Search
+                    <CommandMenu/>
                 </div>
             </div>
         </div>
