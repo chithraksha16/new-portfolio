@@ -67,7 +67,7 @@ const experiences = [
     company: "Codelab System",
     role: "AI & ML Intern",
     type: "Internship",
-    period: "10.2025–11.2025",
+    period: "10.2024–11.2024",
     icon: BriefcaseBusiness,
     current: false,
 

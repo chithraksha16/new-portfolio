@@ -127,11 +127,10 @@ const skills: Skill[] = [
   // ─────────────────────────────────────
   // Devicon alternatives
   // ─────────────────────────────────────
-  {
-    name: "Framer Motion",
-    image:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/framermotion/framermotion-original.svg",
-  },
+ {
+  name: "Framer Motion",
+  image: "https://cdn.simpleicons.org/framer/0055FF",
+},
   {
   name: "Render",
   image:
