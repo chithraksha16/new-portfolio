@@ -23,12 +23,21 @@ import {
   BriefcaseBusiness,
   FolderKanban,
   WrenchOff,
-  ShoppingBag,
   GraduationCap,
   Mail,
   ArrowUpRight,
+  Check,
 } from "lucide-react";
 
+import {
+  FaLinkedin,
+  FaGithub,
+  FaDiscord,
+} from "react-icons/fa";
+
+import { FaSquareXTwitter } from "react-icons/fa6";
+
+// Menu Items
 const menuItems = [
   {
     label: "Portfolio",
@@ -42,41 +51,42 @@ const menuItems = [
     href: "/services",
     icon: WrenchOff,
     group: "Menu",
-     keywords: [
-    "services",
-    "web development",
-    "website development",
-    "frontend",
-    "backend",
-    "full stack",
-    "UI UX design",
-    "web design",
-    "development",
-    "solutions",
-    "freelancing",
-  ],
+    keywords: [
+      "services",
+      "web development",
+      "website development",
+      "frontend",
+      "backend",
+      "full stack",
+      "UI UX design",
+      "web design",
+      "development",
+      "solutions",
+      "freelancing",
+    ],
   },
   {
     label: "Contact",
     href: "/contact",
     icon: Mail,
     group: "Menu",
-     keywords: [
-    "contact",
-    "get in touch",
-    "email",
-    "message",
-    "connect",
-    "hire me",
-    "work together",
-    "collaboration",
-    "inquiry",
-    "business",
-    "project discussion",
-  ],
+    keywords: [
+      "contact",
+      "get in touch",
+      "email",
+      "message",
+      "connect",
+      "hire me",
+      "work together",
+      "collaboration",
+      "inquiry",
+      "business",
+      "project discussion",
+    ],
   },
 ];
 
+// Portfolio Sections
 const portfolioItems = [
   {
     label: "About",
@@ -110,10 +120,45 @@ const portfolioItems = [
   },
 ];
 
+// Social Links
+const socialItems = [
+  {
+    label: "LinkedIn",
+    handle: "chithraksha",
+    href: "https://linkedin.com/in/chithraksha",
+    icon: FaLinkedin,
+    keywords: ["linkedin", "professional", "network"],
+  },
+  {
+    label: "GitHub",
+    handle: "chithraksha16",
+    href: "https://github.com/chithraksha16",
+    icon: FaGithub,
+    keywords: ["github", "repositories", "code"],
+  },
+  {
+    label: "X (Twitter)",
+    handle: "chithraksha_",
+    href: "https://x.com/chithraksha_",
+    icon: FaSquareXTwitter,
+    keywords: ["twitter", "x", "social"],
+  },
+  {
+    label: "Discord",
+    handle: "chithraksha_16",
+    copy: true,
+    icon: FaDiscord,
+    keywords: ["discord", "username", "chat"],
+  },
+];
+
 export default function CommandMenu() {
   const [open, setOpen] = useState(false);
+  const [copied, setCopied] = useState(false);
+
   const router = useRouter();
 
+  // Keyboard Shortcut
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       if (
@@ -132,9 +177,38 @@ export default function CommandMenu() {
     };
   }, []);
 
+  // Navigate
   const navigate = (href: string) => {
     setOpen(false);
     router.push(href);
+  };
+
+  // Copy Discord Username
+  const copyDiscord = async () => {
+    try {
+      await navigator.clipboard.writeText("chithraksha_16");
+
+      setCopied(true);
+
+      setTimeout(() => {
+        setCopied(false);
+      }, 1500);
+    } catch {
+      console.error("Unable to copy Discord username");
+    }
+  };
+
+  // Handle Social Links
+  const handleSocialClick = (item: (typeof socialItems)[number]) => {
+    if (item.copy) {
+      copyDiscord();
+      return;
+    }
+
+    if (item.href) {
+      window.open(item.href, "_blank", "noopener,noreferrer");
+      setOpen(false);
+    }
   };
 
   return (
@@ -160,9 +234,9 @@ export default function CommandMenu() {
       <CommandDialog
         open={open}
         onOpenChange={setOpen}
-        showCloseButton={false}
-        className="max-w-[640px] overflow-hidden rounded-2xl border border-border bg-background p-0 shadow-2xl"
+        
       >
+        {/* Search Input */}
         <div className="relative">
           <CommandInput
             placeholder="Type a command or search..."
@@ -228,6 +302,44 @@ export default function CommandMenu() {
                   <Icon className="size-[18px] text-muted-foreground" />
 
                   <span>{item.label}</span>
+                </CommandItem>
+              );
+            })}
+          </CommandGroup>
+
+          <CommandSeparator className="my-3" />
+
+          {/* Social Links */}
+          <CommandGroup heading="Social Links">
+            {socialItems.map((item) => {
+              const Icon = item.icon;
+
+              return (
+                <CommandItem
+                  key={item.label}
+                  value={item.label}
+                  keywords={item.keywords}
+                  onSelect={() => handleSocialClick(item)}
+                  className="flex  h-11 cursor-pointer items-center gap-3 rounded-lg px-3"
+                >
+                  <Icon className="size-[18px] text-muted-foreground" />
+
+                  <span>{item.label}</span>
+
+                  {item.copy ? (
+                    <span className="ml-auto flex items-center gap-1 text-xs text-muted-foreground">
+                      {copied ? (
+                        <>
+                          <Check className="size-3 text-green-500" />
+                          Copied!
+                        </>
+                      ) : (
+                        "Copy username"
+                      )}
+                    </span>
+                  ) : (
+                    <ArrowUpRight className="ml-auto size-4 text-muted-foreground" />
+                  )}
                 </CommandItem>
               );
             })}

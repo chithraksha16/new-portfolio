@@ -34,6 +34,7 @@ function Command({
 }
 
 
+
 function CommandDialog({
   title = "Command Palette",
   description = "Search for a command to run...",
@@ -52,7 +53,11 @@ function CommandDialog({
     <Dialog {...props}>
       <DialogContent
         className={cn(
-          "top-1/3 translate-y-0 overflow-hidden rounded-xl! p-0",
+          "fixed left-1/2 top-1/2 z-50",
+          "-translate-x-1/2 -translate-y-1/2",
+          "w-[calc(100vw-2rem)] max-w-[640px]",
+          "max-h-[85vh] overflow-hidden",
+          "rounded-xl! p-0",
           className
         )}
         showCloseButton={showCloseButton}
@@ -70,6 +75,7 @@ function CommandDialog({
     </Dialog>
   );
 }
+
 
 
 function CommandInput({
