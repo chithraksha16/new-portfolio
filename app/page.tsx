@@ -481,7 +481,7 @@ export default function Home() {
             }}
           />
           </section>
-          <section className="skills">
+          <section id="skills">
           <TechStack/>
           <div
             className="
@@ -535,7 +535,7 @@ export default function Home() {
                 "repeating-linear-gradient(45deg, currentColor 0, currentColor 1px, transparent 1px, transparent 8px)",
             }}
           />
-          <section>
+          <section id="projects">
             <Projects/>
           </section>
 

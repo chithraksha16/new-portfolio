@@ -215,20 +215,16 @@ export default function CommandMenu() {
     <>
       {/* Search Trigger */}
       <button
-        onClick={() => setOpen(true)}
-        className="flex items-center gap-2 rounded-full border bg-muted/50 px-3 py-2 text-muted-foreground transition-colors hover:bg-muted"
-        aria-label="Open search"
-      >
-        <Search size={17} />
+  onClick={() => setOpen(true)}
+  className="inline-flex h-8 items-center gap-2 rounded-full border bg-muted/50 px-1.5 text-muted-foreground transition-colors hover:bg-muted sm:px-3"
+  aria-label="Open search"
+>
+  <Search className="size-3 shrink-0" />
 
-        <span className="hidden text-sm sm:inline">
-          Search
-        </span>
-
-        <kbd className="hidden rounded border bg-background px-1.5 py-0.5 text-xs sm:inline">
-          Ctrl K
-        </kbd>
-      </button>
+  <kbd className="hidden rounded border bg-background px-1 py-0.5 text-[10px] sm:inline">
+    Ctrl K
+  </kbd>
+</button>
 
       {/* Command Dialog */}
       <CommandDialog
