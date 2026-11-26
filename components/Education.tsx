@@ -1,3 +1,4 @@
+
 "use client";
 
 import { GraduationCap, CalendarDays, Award } from "lucide-react";
@@ -14,53 +15,63 @@ const education = [
 
 export default function Education() {
   return (
-    <section id="education" className="w-full">
-      {/* Section heading */}
-      <div className="border-b border-border">
-        <h2 className="px-2 pb-3 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+    <section id="education" className="mt-3 w-full">
+
+      {/* Header - Same as other sections */}
+      <div className="flex items-center justify-between border-b border-border px-4 py-2 sm:px-5 md:px-6">
+        <h2 className="font-heading text-2xl font-bold tracking-tight text-foreground sm:text-3xl md:text-4xl">
           Education
         </h2>
+
+        <span className="hidden font-sans text-[11px] text-muted-foreground sm:block">
+          ~/education
+        </span>
       </div>
 
-      {/* Education entries */}
-      <div>
+      {/* Education Entries */}
+      <div className="px-4 sm:px-5 md:px-6">
         {education.map((item) => (
           <article
             key={item.institution}
-            className="group border-b border-border px-2 py-6 transition-colors duration-300"
+            className="group border-b border-border py-4 transition-colors duration-300 sm:py-5"
           >
-            {/* Institution */}
-            <div className="flex items-start gap-3 sm:gap-4">
-              <div className="flex size-10 shrink-0 items-center justify-center rounded-xl border border-border bg-muted/50 text-foreground transition-colors group-hover:bg-accent">
-                <GraduationCap className="size-5" />
+            <div className="flex items-start gap-3">
+
+              {/* Icon */}
+              <div className="flex size-9 shrink-0 items-center justify-center rounded-lg border border-border bg-muted/50 text-foreground transition-colors group-hover:bg-accent">
+                <GraduationCap className="size-4.5" />
               </div>
 
+              {/* Content */}
               <div className="min-w-0 flex-1">
-                <h3 className="text-lg font-semibold leading-snug tracking-tight text-foreground sm:text-xl">
+
+                {/* Institution */}
+                <h3 className="text-base font-semibold leading-snug tracking-tight text-foreground sm:text-lg">
                   {item.institution}
                 </h3>
 
-                <p className="mt-2 text-sm font-medium text-foreground/85 sm:text-base">
+                {/* Degree */}
+                <p className="mt-1.5 text-[13px] font-medium text-foreground/85 sm:text-sm">
                   {item.degree}
                 </p>
 
-                {/* Dates */}
-                <div className="mt-3 flex flex-wrap items-center gap-x-2 gap-y-2 text-sm text-muted-foreground">
-                  <CalendarDays className="size-4 shrink-0" />
+                {/* Dates and Status */}
+                <div className="mt-2 flex flex-wrap items-center gap-x-2 gap-y-1.5 text-[11px] text-muted-foreground sm:text-xs">
+                  <CalendarDays className="size-3.5 shrink-0" />
                   <span>{item.period}</span>
                   <span className="text-border">•</span>
                   <span>{item.status}</span>
                 </div>
 
                 {/* CGPA */}
-                <div className="mt-4 inline-flex items-center gap-2 rounded-lg border border-border bg-muted/40 px-3 py-2">
-                  <Award className="size-4 text-muted-foreground" />
+                <div className="mt-3 inline-flex items-center gap-2 rounded-md border border-border bg-muted/40 px-2.5 py-1.5">
+                  <Award className="size-3.5 text-muted-foreground" />
 
-                  <span className="text-sm text-muted-foreground">
+                  <span className="text-xs text-muted-foreground">
                     CGPA
                   </span>
 
-                  <span className="text-sm font-semibold tabular-nums text-foreground">
+                  <span className="text-xs font-semibold tabular-nums text-foreground">
                     {item.score}
                   </span>
                 </div>

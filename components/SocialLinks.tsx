@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState } from "react";
@@ -52,146 +53,75 @@ const socials: Social[] = [
   },
 ];
 
-const SocialLinks = () => {
+export default function SocialLinks() {
   const [copied, setCopied] = useState(false);
 
   const copyHandle = async (handle: string) => {
     try {
       await navigator.clipboard.writeText(handle);
-
       setCopied(true);
-
-      setTimeout(() => {
-        setCopied(false);
-      }, 1500);
-    } catch {}
+      setTimeout(() => setCopied(false), 1500);
+    } catch {
+      setCopied(false);
+    }
   };
 
   return (
     <section className="w-full">
-      <div className="grid w-full grid-cols-1 border border-black/10 bg-[#fafafa] sm:grid-cols-2">
+      <div className="grid w-full grid-cols-1 overflow-hidden rounded-lg border border-black/10 bg-[#fafafa] sm:grid-cols-2">
+
         {socials.map(
           ({ name, handle, href, copy, icon: Icon, brand }, index) => {
             const style = {
               "--brand": brand,
             } as CSSProperties;
 
+            const classes = `
+              group flex min-h-[72px] items-center gap-3
+              bg-[#fafafa] px-3 py-3 text-left
+              transition-colors duration-200 hover:bg-white
+              sm:min-h-[80px] sm:px-4
+              ${index % 2 === 0 ? "sm:border-r sm:border-black/10" : ""}
+              ${index < 2 ? "border-b border-black/10" : ""}
+            `;
+
             const content = (
               <>
-                {/* Icon */}
+                {/* Social Icon */}
                 <div
                   className="
-                    flex
-                    size-12
-                    shrink-0
-                    items-center
-                    justify-center
-                    rounded-[14px]
-                    border
-                    border-black/10
-                    bg-white
-                    text-[#24272A]
-                    shadow-[0_2px_10px_rgba(0,0,0,0.04)]
-                    transition-all
-                    duration-300
+                    flex size-9 shrink-0 items-center justify-center
+                    rounded-lg border border-black/10 bg-white
+                    text-[#24272A] shadow-sm
+                    transition-all duration-300
                     group-hover:border-transparent
                     group-hover:bg-[var(--brand)]
                     group-hover:text-white
-                    group-hover:shadow-[0_8px_25px_rgba(0,0,0,0.12)]
-                    sm:size-[52px]
                   "
                 >
-                  <Icon className="size-6 sm:size-7" />
+                  <Icon className="size-[18px]" />
                 </div>
 
-                {/* Name + Handle */}
+                {/* Name and Handle */}
                 <div className="min-w-0 flex-1">
-                  <h3
-                    className="
-                      text-sm
-                      font-semibold
-                      tracking-[-0.01em]
-                      text-[#17191B]
-                      sm:text-base
-                    "
-                  >
+                  <h3 className="text-[13px] font-semibold tracking-tight text-[#17191B] sm:text-sm">
                     {name === "X" ? "X (Formerly Twitter)" : name}
                   </h3>
 
-                  <p
-                    className="
-                      mt-1
-                      truncate
-                      text-xs
-                      text-[#777B80]
-                      sm:text-sm
-                    "
-                  >
+                  <p className="mt-0.5 truncate text-[11px] text-[#777B80] sm:text-xs">
                     {copy && copied ? "Copied!" : handle}
                   </p>
                 </div>
 
                 {/* Arrow */}
-                <div
-                  className="
-                    flex
-                    size-8
-                    shrink-0
-                    items-center
-                    justify-center
-                    text-[#85898D]
-                    transition-all
-                    duration-300
-                    group-hover:-translate-y-0.5
-                    group-hover:translate-x-0.5
-                    group-hover:text-[#17191B]
-                  "
-                >
+                <div className="flex size-6 shrink-0 items-center justify-center text-[#85898D] transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-[#17191B]">
                   <ArrowUpRight
-                    className="
-                      size-4
-                      sm:size-[18px]
-                    "
-                    strokeWidth={1.5}
+                    className="size-3.5"
+                    strokeWidth={1.7}
                   />
                 </div>
               </>
             );
-
-            const classes = `
-              group
-              relative
-              flex
-              min-h-[92px]
-              items-center
-              gap-4
-              border-b
-              border-black/10
-              bg-[#fafafa]
-              px-5
-              py-5
-              transition-all
-              duration-300
-              hover:bg-white
-              sm:min-h-[112px]
-              sm:px-6
-              sm:py-6
-              ${
-                index % 2 === 0
-                  ? "sm:border-r"
-                  : ""
-              }
-              ${
-                index >= 2
-                  ? "sm:border-b-0"
-                  : ""
-              }
-              ${
-                index === 1
-                  ? "sm:border-b"
-                  : ""
-              }
-            `;
 
             return copy ? (
               <button
@@ -199,7 +129,7 @@ const SocialLinks = () => {
                 type="button"
                 onClick={() => copyHandle(copy)}
                 aria-label={`Copy my ${name} handle`}
-                className={`${classes} text-left`}
+                className={classes}
                 style={style}
               >
                 {content}
@@ -222,6 +152,4 @@ const SocialLinks = () => {
       </div>
     </section>
   );
-};
-
-export default SocialLinks;
+}
